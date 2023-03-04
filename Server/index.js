@@ -6,6 +6,9 @@ import Cors from "cors";
 const app = Express();
 const cors = Cors();
 
+app.use(cors);
+app.use(Express.json())
+
 const PORT = 5001;
 
 mongoose.connect("mongodb+srv://Nelson123:123nelson321KFC@cluster0.4tla0xo.mongodb.net/MainDB?retryWrites=true&w=majority");
@@ -23,21 +26,5 @@ app.get('/dishes', (req, res,) => {
         else {
             res.json(result)
         }
-    }).clone().catch(function (err) { console.log(err) })
-});
-
-app.post('/upvote', async (req, res) => {
-    await DishModel.updateOne(
-        { name: "Pancake" },
-        { $inc: { upvotes: 1 } },
-
-        function (err, docs) {
-            if (err) {
-                console.log(err)
-            }
-            else {
-                console.log("Updated Docs : ", docs);
-            }
-        }
-    )
+    }).sort({ upvotes: -1 }).clone().catch(function (err) { console.log(err) })
 });

@@ -1,0 +1,19 @@
+.daily {
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+    border-bottom: 0.05em solid aliceblue;
+    margin-left: 5em;
+    margin-right: 5em;
+
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+h2 {
+    margin-top: 0;
+}

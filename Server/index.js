@@ -4,6 +4,7 @@ import DishModel from "./models/dish.js";
 import Cors from "cors";
 
 const app = Express();
+const router = Express.Router();
 const cors = Cors();
 
 app.use(cors);
@@ -27,4 +28,15 @@ app.get('/dishes', (req, res,) => {
             res.json(result)
         }
     }).sort({ upvotes: -1 }).clone().catch(function (err) { console.log(err) })
+});
+
+app.get('/dishes/find/:name', function (req, res,) {
+    DishModel.find({ name: req.params.name }, (err, result) => {
+        if (err) {
+            res.json(err)
+        }
+        else {
+            res.json(result)
+        }
+    }).clone().catch(function (err) { console.log(err) })
 });

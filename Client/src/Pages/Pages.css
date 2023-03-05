@@ -1,13 +1,6 @@
-.daily {
-    text-align: center;
-}
-
+/*MultiPage*/
 .title {
     text-align: center;
-    border-bottom: 0.05em solid aliceblue;
-    margin-left: 5em;
-    margin-right: 5em;
-
 }
 
 h1 {
@@ -16,4 +9,33 @@ h1 {
 
 h2 {
     margin-top: 0;
+}
+
+/*browse*/
+.browse input {
+    padding-left: 1vw;
+    padding-right: 39vw;
+    height: 2em;
+}
+
+/*daily*/
+.daily {
+    text-align: center;
+}
+
+/*about*/
+#about-1 {
+    padding-left: 5em;
+    padding-right: 5em;
+    margin-bottom: 5em;
+}
+
+#description {
+    float: left;
+    margin-right: 1em;
+    border: 0.15em solid #101919;
+}
+
+#description-cont {
+    height: 16em;
 }

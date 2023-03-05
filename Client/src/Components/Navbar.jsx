@@ -7,6 +7,7 @@ function navbar() {
             <nav className="navbar">
                 <NavLink to='/' className="navbar" id="navbar-logo">Consumption
                 </NavLink>
+                <NavLink to='/browse' className="navbar">Browse</NavLink>
                 <NavLink to='/daily' className="navbar">Daily</NavLink>
                 <NavLink to='/about' className="navbar">About</NavLink>
             </nav>
